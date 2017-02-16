@@ -1,0 +1,26 @@
+##
+## Manjaro Linux repository mirrorlist
+## Generated on 11 January 2017 15:28
+##
+## Use pacman-mirrors to modify
+##
+
+## Location  : China
+## Time      :  0.219
+## Last Sync : 
+Server = http://mirrors.tuna.tsinghua.edu.cn/manjaro/stable/$repo/$arch
+
+## Location  : China
+## Time      :  0.395
+## Last Sync : 
+Server = http://mirrors.ustc.edu.cn/manjaro/stable/$repo/$arch
+
+## Location  : China
+## Time      :  0.517
+## Last Sync : 
+#Server = http://ftp.cuhk.edu.hk/pub/Linux/manjaro/stable/$repo/$arch
+
+Server = http://mirror.bjtu.edu.cn/manjaro/$branch/$repo/$arch
+
+
+

@@ -1,0 +1,13 @@
+##
+## Pacman Mirrorlist
+##
+
+[Germany]
+Server = http://mirror.ragenetwork.de/manjaro/$branch/$repo/$arch
+Server = http://ftp.halifax.rwth-aachen.de/manjaro/$branch/$repo/$arch
+Server = http://ftp.tu-chemnitz.de/pub/linux/manjaro/$branch/$repo/$arch
+Server = http://mirror.netzspielplatz.de/manjaro/packages/$branch/$repo/$arch
+Server = http://mirror.netcologne.de/manjaro/$branch/$repo/$arch
+Server = http://repo.rhindon.net/manjaro/$branch/$repo/$arch
+Server = http://mirrors.cicku.me/manjaro/$branch/$repo/$arch
+Server = http://repo.stdout.net/manjaro/$branch/$repo/$arch

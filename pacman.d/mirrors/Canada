@@ -1,0 +1,7 @@
+##
+## Pacman Mirrorlist
+##
+
+[Canada]
+Server = http://manjaro.cybr.ca/$branch/$repo/$arch
+Server = http://ca.mirror.babylon.network/manjaro/$branch/$repo/$arch
