@@ -1,0 +1,23 @@
+# CFE was here
+# /etc/udev/rules.d/10-lauterbach.rules
+
+# handle udev events in kernel 2.6.22+
+ACTION=="add",    SUBSYSTEM=="usb", ENV{DEVTYPE}=="usb_device",   ENV{PRODUCT}=="897/*", \
+		  NAME="lauterbach/trace32/%k", MODE="0666", \
+		  OPTIONS="last_rule"
+
+ACTION=="add",    SUBSYSTEM=="usb", ENV{DEVTYPE}=="usb_endpoint", ENV{PRODUCT}=="897/*", \
+		  OPTIONS="last_rule, ignore_device"
+ACTION=="remove", SUBSYSTEM=="usb", ENV{DEVTYPE}=="usb_endpoint", ENV{PRODUCT}=="897/*", \
+		  OPTIONS="last_rule, ignore_device"
+
+# handle udev events upto kernel 2.6.21
+ACTION=="add",    SUBSYSTEM=="usb_device",   ATTR{idVendor}=="0897", \
+		  NAME="lauterbach/trace32/%k", MODE="0666", \
+		  OPTIONS="last_rule"
+
+ACTION=="add",    SUBSYSTEM=="usb_endpoint", ATTR{idVendor}=="0897", \
+		  OPTIONS="last_rule, ignore_device"
+ACTION=="remove", SUBSYSTEM=="usb_endpoint", ATTR{idVendor}=="0897", \
+		  OPTIONS="last_rule, ignore_device"
+

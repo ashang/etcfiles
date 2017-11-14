@@ -1,0 +1,56 @@
+The files in this directory are read by udev(7) and used when events
+are performed by the kernel.  The udev daemon watches this directory
+with inotify so that changes to these files are automatically picked
+up, for this reason they must be files and not symlinks to another
+location as in the case in Debian.
+
+Packages do not generally install rules here, this directory is for
+local rules.  If you want to override behaviour of package-supplied
+rules, which can be found in /lib/udev/rules.d, you can do one of
+two things:
+
+ 1) Write your own rules in this directory that assign the name,
+    symlinks, permissions, etc. that you want.  Pick a number higher
+    than the rules you want to override, and yours will be used.
+
+ 2) Copy the file from /lib/udev/rules.d and edit it here; you
+    should generally only do this if you want to prevent a program
+    from being run.
+
+
+If the ordering of files in this directory are not important to you,
+it's recommended that you simply name your files "descriptive-name.rules"
+such that they are processed AFTER all numbered rules in both this
+directory and /lib/udev/rules.d and thus override anything set there.
+
+
+
+
+Files should be named xx-descriptive-name.rules, the xx should be
+chosen first according to the following sequence points:
+
+  00   rules that it is critical to be run first, usually
+       only WAIT_FOR_SYSFS
+
+  20   rules that change the name from the device from the default
+       (cannot be overriden)
+
+  40   rules that set the permissions of device nodes
+       (can be overriden by later rules)
+
+  60   rules that add symlinks to device nodes
+       (adds to those set in earlier rules)
+
+  80   rules that run programs (but do not load modules)
+
+  90   rules that load modules
+
+  99   rules that it is critical to be run last
+
+
+This scheme has been chosen so that user-supplied rules are normally
+named 50-*.rules for the right thing to happen.
+
+Packages should chose the approriate sequence point and add 5 to it
+(e.g. 25-iftab.rules, 45-libsane.rules, etc.) unless there is a need
+for a particular order.

@@ -1,0 +1,2 @@
+SUBSYSTEM=="block", ENV{ID_TYPE}!="?*", KERNEL=="hd*[0-9]|sd*[!0-9]|sd*[0-9]|cciss?c[0-9]d[0-9]", ENV{ID_TYPE}="disk"
+SUBSYSTEM=="block", ENV{ID_TYPE}!="?*", KERNEL=="sr[0-9]*", ENV{ID_TYPE}="cd"
