@@ -1,0 +1,11 @@
+#----------------- kFreeBSD ------------------#
+deb http://kfreebsd-gnu.debian.net/debian unreleased main
+deb http://ftp.de.debian.org/debian-kfreebsd unstable main
+
+# for arch-indep packages
+deb http://ftp.nl.debian.org/debian dists/unstable/main/binary-i386/
+
+# Uncomment if you want the apt-get source function to work
+#deb-src http://ftp.nl.debian.org/debian unstable main
+
+#----------------- kFreeBSD ------------------#
