@@ -1,3 +1,6 @@
+#add keys
+#sudo apt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys A20F259AEB9C94BB
+
 deb http://mirrors/ubuntu/ xenial main restricted universe multiverse
 deb http://mirrors/ubuntu/ xenial-updates main restricted universe multiverse
 deb http://mirrors/ubuntu/ xenial-proposed main restricted universe multiverse
@@ -49,7 +52,7 @@ deb-src http://archive.canonical.com/ubuntu xenial partner
 
 # Google software repository http://www.google.com/linuxrepositories/apt.html
 # wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
-# or (gpg --keyserver subkeys.pgp.net --recv A040830F7FAC5991 && gpg --export --armor A040830F7FAC5991 | sudo apt-key add - ) 
+# or (gpg --keyserver subkeys.pgp.net --recv A040830F7FAC5991 && gpg --export --armor A040830F7FAC5991 | sudo apt-key add - )
 # Google software repository
 deb http://dl.google.com/linux/deb/ stable non-free
 
@@ -59,7 +62,7 @@ deb http://dl.google.com/linux/deb/ stable non-free
 #gpg: no ultimately trusted keys found
 #gpg: Total number processed: 1
 #gpg:               imported: 1
-#$ gpg --check-sigs 428D7C01 
+#$ gpg --check-sigs 428D7C01
 #pub 1024D/428D7C01 2008-09-02
 #uid Ubuntu Debug Symbol Archive Automatic Signing Key <ubuntu-archive@lists.ubuntu.com>
 #sig!3        428D7C01 2008-09-02  Ubuntu Debug Symbol Archive Automatic Signing Key <ubuntu-archive@lists.ubuntu.com>
@@ -88,7 +91,7 @@ deb-src http://mirrors.sohu.com/ubuntu/ xenial-backports main restricted univers
 # sudo apt update
 # E: The method driver /usr/lib/apt/methods/https could not be found.
 # sudo apt install apt-transport-https
- 
+
 # sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys KEYS
 # sudo apt-get dist-upgrade --allow-unauthenticated -y
 
@@ -202,8 +205,8 @@ deb-src http://mirrors.aliyun.com/ubuntu/ xenial-backports main restricted unive
 
 
 # sudo apt install apt-transport-https
-# 
-# sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 
+#
+# sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys
 #
 # sudo apt-get dist-upgrade --allow-unauthenticated -y
 # deb http://apt.syncthing.net/ syncthing release
