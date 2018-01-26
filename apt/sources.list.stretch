@@ -1,23 +1,31 @@
-deb http://mirrors/debian stretch main contrib non-free
-deb-src http://mirrors/debian stretch main contrib non-free
+# apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E9C74FEEA2098A6E 14219A96E15E78F4 1397BC53640DB551 5C808C2B65558117 818A435C5FCBF54A 7EA0A9C3F273FCD8
+#gpg: key 8D81803C0EBFCD88: "Docker Release (CE deb) <docker@docker.com>"
+#gpg: key 818A435C5FCBF54A: "Sebastian Lackner (WineHQ packages) <sebastian@fds-team.de>"
+#gpg: key 5C808C2B65558117: "Christian Marillat <marillat@debian.org>"
+#gpg: key 7721F63BD38B4796: "Google Inc. (Linux Packages Signing Authority) <linux-packages-keymaster@google.com>"
+#gpg: key 14219A96E15E78F4: "GitLab B.V. (package repository signing key) <packages@gitlab.com>"
+#gpg: key 7E3F070089DF5277: "Guillaume Plessis <gui@dotdeb.org>"
 
-deb http://http.debian.net/debian stretch main contrib non-free
-deb-src http://http.debian.net/debian stretch main contrib non-free
 
-deb http://http.debian.net/debian stretch-updates main contrib non-free
-deb-src http://http.debian.net/debian stretch-updates main contrib non-free
+###deb http://mirrors/debian stretch main contrib non-free
+###deb-src http://mirrors/debian stretch main contrib non-free
 
-deb http://ftp.debian.org/debian stretch main contrib non-free
-deb-src http://ftp.debian.org/debian stretch main contrib non-free
+deb http://deb.debian.org/debian stretch main contrib non-free
+deb-src http://deb.debian.org/debian stretch main contrib non-free
 
-deb http://ftp.debian.org/debian stretch-updates main contrib non-free
-deb-src http://ftp.debian.org/debian stretch-updates main contrib non-free
+deb http://deb.debian.org/debian stretch-updates main contrib non-free
+deb-src http://deb.debian.org/debian stretch-updates main contrib non-free
 
-deb http://ftp.debian.org/debian stretch-proposed-updates main
-deb http://ftp.debian.org/debian proposed-updates main contrib non-free
+deb http://deb.debian.org/debian stretch-proposed-updates main
+deb http://deb.debian.org/debian proposed-updates main contrib non-free
 
 deb http://security.debian.org/ stretch/updates main contrib non-free
 deb-src http://security.debian.org/ stretch/updates main contrib non-free
+
+### Ports
+
+##deb [arch=ppc64] http://deb.debian.org/debian-ports unstretch main
+#deb http://emdebian.org/tools/debian/ stretch main
 
 
 # Backport
@@ -38,14 +46,14 @@ deb-src http://security.debian.org/ stretch/updates main contrib non-free
 # Pin-Priority: 200
 
 # https://backports.debian.org/
-# Backports are packages taken from the next Debian release (called "testing"), adjusted and recompiled for usage on Debian stable.
-# In a few cases, usually for security updates, backports are also created from the Debian unstable distribution.
+# Backports are packages taken from the next Debian release (called "stretch"), adjusted and recompiled for usage on Debian stretch.
+# In a few cases, usually for security updates, backports are also created from the Debian unstretch distribution.
 
 # All backports are deactivated by default (i.e. the packages are pinned to 100 by using ButAutomaticUpgrades: yes in the Release files. If you want to install something from backports run:
 
 # apt -t stretch-backports install "package"
 
-deb http://ftp.debian.org/debian stretch-backports main
+deb http://deb.debian.org/debian stretch-backports main
 
 # moblock, mobloquer http://moblock-deb.sourceforge.net
 #gpg --keyserver wwwkeys.eu.pgp.net --recv 9072870B
@@ -57,7 +65,7 @@ deb http://ftp.debian.org/debian stretch-backports main
 #(wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add - )
 # or (gpg --keyserver subkeys.pgp.net --recv A040830F7FAC5991 && gpg --export --armor A040830F7FAC5991 | sudo apt-key add - ) 
 # Google stretch repository
-deb http://dl.google.com/linux/deb/ stable non-free
+deb http://dl.google.com/linux/deb/ stable main
 deb http://dl.google.com/linux/musicmanager/deb/ stable main
 
 
@@ -121,7 +129,6 @@ deb http://mirrors.ustc.edu.cn/dotdeb stretch all
 deb-src http://mirrors.ustc.edu.cn/dotdeb stretch all
 
 
-
 deb http://mirrors.ustc.edu.cn/debian/ stretch main contrib non-free
 deb-src http://mirrors.ustc.edu.cn/debian/ stretch main contrib non-free
 
@@ -142,14 +149,4 @@ deb https://packages.gitlab.com/gitlab/gitlab-ce/debian/ stretch main
 deb-src https://packages.gitlab.com/gitlab/gitlab-ce/debian/ stretch main
 
 deb http://mirrors.tuna.tsinghua.edu.cn/gitlab-ci-multi-runner/debian stretch main
-
-
-##deb [arch=ppc64] http://deb.debian.org/debian-ports unstretch main
-#deb http://emdebian.org/tools/debian/ stretch main
-
-
-deb http://mirror.bjtu.edu.cn/debian stretch main contrib non-free
-deb http://mirror.bjtu.edu.cn/debian-security stretch/updates main contrib non-free
-deb http://mirror.bjtu.edu.cn/debian proposed-updates main contrib non-free
-deb-src http://mirror.bjtu.edu.cn/debian stretch main contrib non-free
 
