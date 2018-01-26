@@ -32,40 +32,20 @@ deb-src http://mirrors/ubuntu/ artful-security main restricted universe multiver
 deb-src http://mirrors/ubuntu/ artful-backports main restricted universe multiverse
 
 
-deb http://mirrors.163.com/ubuntu/ artful main restricted universe multiverse
-deb-src http://mirrors.163.com/ubuntu/ artful main restricted universe multiverse
+deb http://mirrors.ustc.edu.cn/ubuntu/ artful main restricted universe multiverse
+deb-src http://mirrors.ustc.edu.cn/ubuntu/ artful main restricted universe multiverse
 
-deb http://mirrors.163.com/ubuntu/ artful-updates main restricted universe multiverse
-deb-src http://mirrors.163.com/ubuntu/ artful-updates main restricted universe multiverse
+deb http://mirrors.ustc.edu.cn/ubuntu/ artful-updates main restricted universe multiverse
+deb-src http://mirrors.ustc.edu.cn/ubuntu/ artful-updates main restricted universe multiverse
 
-deb http://mirrors.163.com/ubuntu/ artful-proposed main restricted universe multiverse
-deb-src http://mirrors.163.com/ubuntu/ artful-proposed main restricted universe multiverse
+deb http://mirrors.ustc.edu.cn/ubuntu/ artful-proposed main restricted universe multiverse
+deb-src http://mirrors.ustc.edu.cn/ubuntu/ artful-proposed main restricted universe multiverse
 
-deb http://mirrors.163.com/ubuntu/ artful-security main restricted universe multiverse
-deb-src http://mirrors.163.com/ubuntu/ artful-security main restricted universe multiverse
+deb http://mirrors.ustc.edu.cn/ubuntu/ artful-security main restricted universe multiverse
+deb-src http://mirrors.ustc.edu.cn/ubuntu/ artful-security main restricted universe multiverse
 
-deb http://mirrors.163.com/ubuntu/ artful-backports main restricted universe multiverse
-deb-src http://mirrors.163.com/ubuntu/ artful-backports main restricted universe multiverse
-
-
-deb http://archive.ubuntu.com/ubuntu/ artful main restricted universe multiverse
-deb-src http://archive.ubuntu.com/ubuntu/ artful main universe multiverse restricted
-
-deb http://archive.ubuntu.com/ubuntu/ artful-proposed main restricted universe multiverse
-deb-src http://archive.ubuntu.com/ubuntu/ artful-proposed main universe multiverse restricted
-
-deb http://archive.ubuntu.com/ubuntu/ artful-backports main restricted universe multiverse
-deb-src http://archive.ubuntu.com/ubuntu/ artful-backports main restricted universe multiverse
-
-deb http://security.ubuntu.com/ubuntu/ artful-security main restricted universe multiverse
-deb-src http://security.ubuntu.com/ubuntu artful-security main restricted universe multiverse
-
-deb http://archive.canonical.com/ artful partner
-deb http://archive.canonical.com/ artful-proposed partner
-
-
-deb http://archive.canonical.com/ubuntu/ artful partner
-deb-src http://archive.canonical.com/ubuntu artful partner
+deb http://mirrors.ustc.edu.cn/ubuntu/ artful-backports main restricted universe multiverse
+deb-src http://mirrors.ustc.edu.cn/ubuntu/ artful-backports main restricted universe multiverse
 
 
 # Google software repository http://www.google.com/linuxrepositories/apt.html
@@ -93,17 +73,6 @@ deb http://dl.google.com/linux/deb/ stable main
 
 #apt-key add key.gpg
 
-
-#deb http://mirrors.sohu.com/ubuntu/ artful main restricted universe multiverse
-#deb http://mirrors.sohu.com/ubuntu/ artful-security main restricted universe multiverse
-#deb http://mirrors.sohu.com/ubuntu/ artful-updates main restricted universe multiverse
-#deb http://mirrors.sohu.com/ubuntu/ artful-proposed main restricted universe multiverse
-#deb http://mirrors.sohu.com/ubuntu/ artful-backports main restricted universe multiverse
-#deb-src http://mirrors.sohu.com/ubuntu/ artful main restricted universe multiverse
-#deb-src http://mirrors.sohu.com/ubuntu/ artful-security main restricted universe multiverse
-#deb-src http://mirrors.sohu.com/ubuntu/ artful-updates main restricted universe multiverse
-#deb-src http://mirrors.sohu.com/ubuntu/ artful-proposed main restricted universe multiverse
-#deb-src http://mirrors.sohu.com/ubuntu/ artful-backports main restricted universe multiverse
 
 
 # sudo apt update
@@ -175,21 +144,6 @@ deb http://repo.yandex.ru/yandex-browser/deb beta main
 
 
 
-deb http://mirrors.ustc.edu.cn/ubuntu/ artful main restricted universe multiverse
-deb-src http://mirrors.ustc.edu.cn/ubuntu/ artful main restricted universe multiverse
-
-deb http://mirrors.ustc.edu.cn/ubuntu/ artful-updates main restricted universe multiverse
-deb-src http://mirrors.ustc.edu.cn/ubuntu/ artful-updates main restricted universe multiverse
-
-deb http://mirrors.ustc.edu.cn/ubuntu/ artful-proposed main restricted universe multiverse
-deb-src http://mirrors.ustc.edu.cn/ubuntu/ artful-proposed main restricted universe multiverse
-
-deb http://mirrors.ustc.edu.cn/ubuntu/ artful-security main restricted universe multiverse
-deb-src http://mirrors.ustc.edu.cn/ubuntu/ artful-security main restricted universe multiverse
-
-deb http://mirrors.ustc.edu.cn/ubuntu/ artful-backports main restricted universe multiverse
-deb-src http://mirrors.ustc.edu.cn/ubuntu/ artful-backports main restricted universe multiverse
-
 deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ artful main multiverse restricted universe
 deb-src http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ artful main multiverse restricted universe
 
@@ -230,4 +184,53 @@ deb-src http://mirrors.aliyun.com/ubuntu/ artful-backports main restricted unive
 # deb http://apt.syncthing.net/ syncthing release
 
 deb https://sensu.global.ssl.fastly.net/apt xenial main
+
+
+deb http://mirrors.163.com/ubuntu/ artful main restricted universe multiverse
+deb-src http://mirrors.163.com/ubuntu/ artful main restricted universe multiverse
+
+deb http://mirrors.163.com/ubuntu/ artful-updates main restricted universe multiverse
+deb-src http://mirrors.163.com/ubuntu/ artful-updates main restricted universe multiverse
+
+deb http://mirrors.163.com/ubuntu/ artful-proposed main restricted universe multiverse
+deb-src http://mirrors.163.com/ubuntu/ artful-proposed main restricted universe multiverse
+
+deb http://mirrors.163.com/ubuntu/ artful-security main restricted universe multiverse
+deb-src http://mirrors.163.com/ubuntu/ artful-security main restricted universe multiverse
+
+deb http://mirrors.163.com/ubuntu/ artful-backports main restricted universe multiverse
+deb-src http://mirrors.163.com/ubuntu/ artful-backports main restricted universe multiverse
+
+
+deb http://archive.ubuntu.com/ubuntu/ artful main restricted universe multiverse
+deb-src http://archive.ubuntu.com/ubuntu/ artful main universe multiverse restricted
+
+deb http://archive.ubuntu.com/ubuntu/ artful-proposed main restricted universe multiverse
+deb-src http://archive.ubuntu.com/ubuntu/ artful-proposed main universe multiverse restricted
+
+deb http://archive.ubuntu.com/ubuntu/ artful-backports main restricted universe multiverse
+deb-src http://archive.ubuntu.com/ubuntu/ artful-backports main restricted universe multiverse
+
+deb http://security.ubuntu.com/ubuntu/ artful-security main restricted universe multiverse
+deb-src http://security.ubuntu.com/ubuntu artful-security main restricted universe multiverse
+
+deb http://archive.canonical.com/ artful partner
+deb http://archive.canonical.com/ artful-proposed partner
+
+deb http://archive.canonical.com/ubuntu/ artful partner
+deb-src http://archive.canonical.com/ubuntu artful partner
+
+
+deb http://mirrors.sohu.com/ubuntu/ artful main restricted universe multiverse
+deb http://mirrors.sohu.com/ubuntu/ artful-security main restricted universe multiverse
+deb http://mirrors.sohu.com/ubuntu/ artful-updates main restricted universe multiverse
+deb http://mirrors.sohu.com/ubuntu/ artful-proposed main restricted universe multiverse
+deb http://mirrors.sohu.com/ubuntu/ artful-backports main restricted universe multiverse
+deb-src http://mirrors.sohu.com/ubuntu/ artful main restricted universe multiverse
+deb-src http://mirrors.sohu.com/ubuntu/ artful-security main restricted universe multiverse
+deb-src http://mirrors.sohu.com/ubuntu/ artful-updates main restricted universe multiverse
+deb-src http://mirrors.sohu.com/ubuntu/ artful-proposed main restricted universe multiverse
+deb-src http://mirrors.sohu.com/ubuntu/ artful-backports main restricted universe multiverse
+deb http://mirrors.sohu.com/ubuntu/ artful main restricted universe multiverse
+
 
