@@ -1,0 +1,23 @@
+{
+    //--------------------------------------------------
+    // Mandatory setting
+    //--------------------------------------------------
+    // https://www.chromium.org/administrators/linux-quick-start
+
+    // Homepage and startup page
+    "ShowHomeButton": true,
+    "HomepageLocation": "https://ashang.org",
+    "RestoreOnStartup": 4,
+    "RestoreOnStartupURLs": ["https://ashang.org", "chrome://newtab"],
+
+    // Proxy (don't put to the last, see proxy-reset)
+    "ProxyMode": "pac_script",
+    "ProxyPacUrl": "https://proxy.ashang.org:8080/accelerated_pac_base.pac",
+
+    // Default Browser
+    "DefaultBrowserSettingEnabled": false
+
+    // Others: Extension Search Privacy Security
+
+    // IMPORTANT: the last line should NOT end with comma ','
+}

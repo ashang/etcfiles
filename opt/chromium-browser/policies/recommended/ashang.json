@@ -1,0 +1,21 @@
+{
+
+    //--------------------------------------------------
+    // Recommended settings
+    //--------------------------------------------------
+    // https://www.chromium.org/administrators/linux-quick-start
+
+    // Authentication
+    "AuthSchemes": "basic,digest,negotiate",
+    "AuthServerWhitelist": "*.ashang.org,*.local,*.test,*.localhost",
+
+    // Application Locale
+    // "ApplicationLocaleValue": "en",
+
+    // Sync: allow now
+    //"SyncDisabled": true
+
+    // Others: Extension Search Privacy Security
+
+    // IMPORTANT: the last line should NOT end with comma ','
+}
