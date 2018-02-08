@@ -1,0 +1,152 @@
+# apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E9C74FEEA2098A6E 14219A96E15E78F4 1397BC53640DB551 5C808C2B65558117 818A435C5FCBF54A 7EA0A9C3F273FCD8
+#gpg: key 8D81803C0EBFCD88: "Docker Release (CE deb) <docker@docker.com>"
+#gpg: key 818A435C5FCBF54A: "Sebastian Lackner (WineHQ packages) <sebastian@fds-team.de>"
+#gpg: key 5C808C2B65558117: "Christian Marillat <marillat@debian.org>"
+#gpg: key 7721F63BD38B4796: "Google Inc. (Linux Packages Signing Authority) <linux-packages-keymaster@google.com>"
+#gpg: key 14219A96E15E78F4: "GitLab B.V. (package repository signing key) <packages@gitlab.com>"
+#gpg: key 7E3F070089DF5277: "Guillaume Plessis <gui@dotdeb.org>"
+
+
+###deb http://mirrors/debian testing main contrib non-free
+###deb-src http://mirrors/debian testing main contrib non-free
+
+deb http://deb.debian.org/debian testing main contrib non-free
+deb-src http://deb.debian.org/debian testing main contrib non-free
+
+deb http://deb.debian.org/debian testing-updates main contrib non-free
+deb-src http://deb.debian.org/debian testing-updates main contrib non-free
+
+deb http://deb.debian.org/debian testing-proposed-updates main
+deb http://deb.debian.org/debian proposed-updates main contrib non-free
+
+deb http://security.debian.org/ testing/updates main contrib non-free
+deb-src http://security.debian.org/ testing/updates main contrib non-free
+
+### Ports
+
+##deb [arch=ppc64] http://deb.debian.org/debian-ports untesting main
+#deb http://emdebian.org/tools/debian/ testing main
+
+
+# Backport
+# apt-get install debian-backports-keyring
+# or
+# gpg --keyserver hkp://subkeys.pgp.net --recv-keys 16BA136C
+# gpg --export 16BA136C | apt-key add -
+# or
+# wget -O - http://backports.org/debian/archive.key | apt-key add -
+
+# All backports are deactivated by default (i.e. the packages are pinned to 1 by using NotAutomatic: yes in the Release files, just as in experimental). If you want to
+# install something from backports run:
+# apt-get -t testing-backports install package
+
+# If you want to get your packages from backports upgraded automatically the following entry in /etc/apt/preferences should be sufficient:
+# Package: *
+# Pin: release a=testing-backports
+# Pin-Priority: 200
+
+# https://backports.debian.org/
+# Backports are packages taken from the next Debian release (called "testing"), adjusted and recompiled for usage on Debian testing.
+# In a few cases, usually for security updates, backports are also created from the Debian untesting distribution.
+
+# All backports are deactivated by default (i.e. the packages are pinned to 100 by using ButAutomaticUpgrades: yes in the Release files. If you want to install something from backports run:
+
+# apt -t testing-backports install "package"
+
+#deb http://deb.debian.org/debian testing-backports main
+
+# moblock, mobloquer http://moblock-deb.sourceforge.net
+#gpg --keyserver wwwkeys.eu.pgp.net --recv 9072870B
+#gpg --export --armor 9072870B | sudo apt-key add -
+# deb http://moblock-deb.sourceforge.net/debian testing main
+# deb-src http://moblock-deb.sourceforge.net/debian testing main
+
+# Google software repository http://www.google.com/linuxrepositories/apt.html
+#(wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add - )
+# or (gpg --keyserver subkeys.pgp.net --recv A040830F7FAC5991 && gpg --export --armor A040830F7FAC5991 | sudo apt-key add - )
+# Google testing repository
+deb http://dl.google.com/linux/deb/ stable main
+deb http://dl.google.com/linux/musicmanager/deb/ stable main
+
+
+# docker
+#deb [arch=amd64] https://download.docker.com/linux/debian testing edge
+#deb-src [arch=amd64] https://download.docker.com/linux/debian testing edge
+deb [arch=amd64] https://download.docker.com/linux/debian stretch stable
+
+
+deb https://mirrors.tuna.tsinghua.edu.cn/debian/ testing main contrib non-free
+deb-src http://mirrors.tuna.tsinghua.edu.cn/debian testing main contrib non-free
+
+deb https://mirrors.tuna.tsinghua.edu.cn/debian/ testing-updates main contrib non-free
+deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ testing-updates main contrib non-free
+
+#deb https://mirrors.tuna.tsinghua.edu.cn/debian/ testing-backports main contrib non-free
+#deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ testing-backports main contrib non-free
+
+deb http://mirrors.tuna.tsinghua.edu.cn/debian-security testing/updates main contrib non-free
+deb-src http://mirrors.tuna.tsinghua.edu.cn/debian-security testing/updates main contrib non-free
+
+
+deb http://mirrors.163.com/debian testing main contrib non-free
+deb-src http://mirrors.163.com/debian testing main contrib non-free
+
+deb http://mirrors.163.com/debian-security testing/updates main contrib non-free
+deb-src http://mirrors.163.com/debian-security testing/updates main contrib non-free
+
+deb http://mirrors.163.com/debian proposed-updates main contrib non-free
+
+deb http://mirrors.163.com/debian testing-proposed-updates main contrib non-free
+deb-src http://mirrors.163.com/debian testing-proposed-updates main contrib non-free
+
+
+#deb https://sensu.global.ssl.fastly.net/apt testing main
+
+
+# Marillat For info visit http://www.deb-multimedia.org
+# apt-get update -oAcquire::AllowInsecureRepositories=true
+# apt-get install deb-multimedia-keyring -oAcquire::AllowInsecureRepositories=true
+deb http://www.deb-multimedia.org testing main non-free
+deb-src http://www.deb-multimedia.org testing main non-free
+
+deb http://mirrors.ustc.edu.cn/debian-multimedia/ testing main non-free
+deb-src http://mirrors.ustc.edu.cn/debian-multimedia/ testing main non-free
+#deb http://mirrors.ustc.edu.cn/debian-multimedia/ testing-backports main
+
+
+# wget https://dl.winehq.org/wine-builds/Release.key -O - | sudo apt-key add -
+deb https://dl.winehq.org/wine-builds/debian/ testing main
+# WINE http://www.winehq.org/download/debtesting
+
+
+# The repository for Debian-based LAMP servers Look in backports.org first!!!
+# http://www.dotdeb.org/
+deb http://packages.dotdeb.org stable all
+deb-src http://packages.dotdeb.org stable all
+# wget -O - https://www.dotdeb.org/dotdeb.gpg | sudo apt-key add -
+
+deb http://mirrors.ustc.edu.cn/dotdeb stable all
+deb-src http://mirrors.ustc.edu.cn/dotdeb stable all
+
+
+deb http://mirrors.ustc.edu.cn/debian/ testing main contrib non-free
+deb-src http://mirrors.ustc.edu.cn/debian/ testing main contrib non-free
+
+deb http://mirrors.ustc.edu.cn/debian/ testing-updates main contrib non-free
+deb-src http://mirrors.ustc.edu.cn/debian/ testing-updates main contrib non-free
+
+deb http://mirrors.ustc.edu.cn/debian testing-proposed-updates main contrib non-free
+deb-src http://mirrors.ustc.edu.cn/debian testing-proposed-updates main contrib non-free
+
+deb http://mirrors.ustc.edu.cn/debian-security/ testing/updates main contrib non-free
+deb-src http://mirrors.ustc.edu.cn/debian-security/ testing/updates main contrib non-free
+
+
+# gitlab
+# this file was generated by packages.gitlab.com for
+# the repository at https://packages.gitlab.com/gitlab/gitlab-ce
+deb https://packages.gitlab.com/gitlab/gitlab-ce/debian/ stretch main
+deb-src https://packages.gitlab.com/gitlab/gitlab-ce/debian/ stretch main
+
+deb http://mirrors.tuna.tsinghua.edu.cn/gitlab-ci-multi-runner/debian stretch main
+

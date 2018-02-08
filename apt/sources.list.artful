@@ -115,8 +115,8 @@ deb https://mirrors.tuna.tsinghua.edu.cn/gitlab-ci-multi-runner/ubuntu xenial ma
 
 
 # mt7601
-deb http://ppa.launchpad.net/thopiekar/mt7601/ubuntu xenial main
-deb-src http://ppa.launchpad.net/thopiekar/mt7601/ubuntu xenial main
+#deb http://ppa.launchpad.net/thopiekar/mt7601/ubuntu xenial main
+#deb-src http://ppa.launchpad.net/thopiekar/mt7601/ubuntu xenial main
 
 # Syncthing
 deb http://apt.syncthing.net/ syncthing release
@@ -168,19 +168,19 @@ deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ artful-backports main multiverse
 deb-src http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ artful-backports main multiverse restricted universe
 
 
-deb http://mirrors.aliyun.com/ubuntu/ artful main restricted universe multiverse
+#deb http://mirrors.aliyun.com/ubuntu/ artful main restricted universe multiverse
 deb-src http://mirrors.aliyun.com/ubuntu/ artful main restricted universe multiverse
 
-deb http://mirrors.aliyun.com/ubuntu/ artful-updates main restricted universe multiverse
+#deb http://mirrors.aliyun.com/ubuntu/ artful-updates main restricted universe multiverse
 deb-src http://mirrors.aliyun.com/ubuntu/ artful-updates main restricted universe multiverse
 
-deb http://mirrors.aliyun.com/ubuntu/ artful-proposed main restricted universe multiverse
+#deb http://mirrors.aliyun.com/ubuntu/ artful-proposed main restricted universe multiverse
 deb-src http://mirrors.aliyun.com/ubuntu/ artful-proposed main restricted universe multiverse
 
-deb http://mirrors.aliyun.com/ubuntu/ artful-security main restricted universe multiverse
+#deb http://mirrors.aliyun.com/ubuntu/ artful-security main restricted universe multiverse
 deb-src http://mirrors.aliyun.com/ubuntu/ artful-security main restricted universe multiverse
 
-deb http://mirrors.aliyun.com/ubuntu/ artful-backports main restricted universe multiverse
+#deb http://mirrors.aliyun.com/ubuntu/ artful-backports main restricted universe multiverse
 deb-src http://mirrors.aliyun.com/ubuntu/ artful-backports main restricted universe multiverse
 
 
@@ -239,5 +239,4 @@ deb-src http://mirrors.sohu.com/ubuntu/ artful-security main restricted universe
 deb-src http://mirrors.sohu.com/ubuntu/ artful-updates main restricted universe multiverse
 deb-src http://mirrors.sohu.com/ubuntu/ artful-proposed main restricted universe multiverse
 deb-src http://mirrors.sohu.com/ubuntu/ artful-backports main restricted universe multiverse
-deb http://mirrors.sohu.com/ubuntu/ artful main restricted universe multiverse
 
