@@ -1,0 +1,44 @@
+#
+# Configuration file for the kerneloops.org kernel crash collector
+#
+# Ksplice Uptrack™ configures kerneloops to send oops reports to the
+# Uptrack developers to help us monitor for any potential problems
+# related to our service.  See
+# <http://www.ksplice.com/uptrack/privacy> for our privacy policy,
+# which covers this and other information submitted to Ksplice servers
+# by the Ksplice Uptrack service.
+#
+
+#
+# Change this variable to 'no' to disable sending oops reports to the
+# Ksplice Uptrack developers.
+#
+# Because of an oddity in how Ubuntu's kernelwatch package works, setting this
+# to 'ask' causes oopses to be automatically submitted to the Uptrack
+# developers. There is no way to make kerneloops prompt you about submitting
+# oopses to Ksplice.
+# 
+allow-submit = ask
+
+
+allow-pass-on = yes
+
+#
+# URL for submitting the oopses
+#
+# Note that due to a bug in kerneloops, the kerneloops will continue to claim
+# oopses are being reported directly to kerneloops.org, regardless of the value
+# of 'submit-url'.
+
+submit-url = http://updates.ksplice.com/update-repository/oops
+
+#
+# Path to syslog file containing full kernel logging output
+#
+log-file = /var/log/kern.log
+
+#
+# Script or program to pipe oops submits to
+#
+
+submit-pipe = /usr/share/uptrack/send-oops
