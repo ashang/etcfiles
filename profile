@@ -2,17 +2,7 @@
 #
 # That this file is used by any Bourne-shell derivative to setup the
 # environment for login shells.
-#
 
-# Load environment settings from profile.env, which is created by
-# env-update from the files in /etc/env.d
-if [ -e /etc/profile.env ] ; then
-	. /etc/profile.env
-fi
-
-# You should override these in your ~/.bashrc (or equivalent) for per-user
-# settings.  For system defaults, you can add a new file in /etc/profile.d/.
-export EDITOR=${EDITOR:-/bin/nano}
 export PAGER=${PAGER:-/usr/bin/less}
 
 # 077 would be more secure, but 022 is generally quite realistic
@@ -22,17 +12,24 @@ umask 022
 # There's no real reason to exclude sbin paths from the normal user,
 # but it can make tab-completion easier when they aren't in the
 # user's PATH to pollute the executable namespace.
-#
-# It is intentional in the following line to use || instead of -o.
-# This way the evaluation can be short-circuited and calling whoami is
-# avoided.
-if [ "$EUID" = "0" ] || [ "$USER" = "root" ] ; then
-	PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:${ROOTPATH}"
-else
-	PATH="/usr/local/bin:/usr/bin:/bin:${PATH}"
-fi
+
+# Append default paths
+appendpath () {
+    case ":$PATH:" in
+        *:"$1":*)
+            ;;
+        *)
+            PATH="$PATH:$1"
+    esac
+}
+
+appendpath '/usr/local/sbin'
+appendpath '/usr/local/bin'
+appendpath '/usr/bin'
+unset appendpath
+
 export PATH
-unset ROOTPATH
+
 
 if [ -n "${BASH_VERSION}" ] ; then
 	# Newer bash ebuilds include /etc/bash/bashrc which will setup PS1
@@ -41,10 +38,10 @@ if [ -n "${BASH_VERSION}" ] ; then
 	if [ -f /etc/bash/bashrc ] ; then
 		# Bash login shells run only /etc/profile
 		# Bash non-login shells run only /etc/bash/bashrc
-		# Since we want to run /etc/bash/bashrc regardless, we source it 
-		# from here.  It is unfortunate that there is no way to do 
-		# this *after* the user's .bash_profile runs (without putting 
-		# it in the user's dot-files), but it shouldn't make any 
+		# Since we want to run /etc/bash/bashrc regardless, we source it
+		# from here.  It is unfortunate that there is no way to do
+		# this *after* the user's .bash_profile runs (without putting
+		# it in the user's dot-files), but it shouldn't make any
 		# difference.
 		. /etc/bash/bashrc
 	else
@@ -57,7 +54,22 @@ else
 	PS1="${USER:-$(whoami 2>/dev/null)}@$(uname -n 2>/dev/null) \$ "
 fi
 
-for sh in /etc/profile.d/*.sh ; do
-	[ -r "$sh" ] && . "$sh"
-done
-unset sh
+
+# Load profiles from /etc/profile.d
+if test -d /etc/profile.d/; then
+	for profile in /etc/profile.d/*.sh; do
+		test -r "$profile" && . "$profile"
+	done
+	unset profile
+fi
+
+# Source global bash config
+if test "$PS1" && test "$BASH" && test -z ${POSIXLY_CORRECT+x} && test -r /etc/bash.bashrc; then
+	. /etc/bash.bashrc
+fi
+
+# Termcap is outdated, old, and crusty, kill it.
+unset TERMCAP
+
+# Man is much better than us at figuring this out
+unset MANPATH
