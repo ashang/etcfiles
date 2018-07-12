@@ -1,0 +1,160 @@
+Package: linux-headers-generic
+Architecture: amd64
+Auto-Installed: 1
+
+Package: linux-image-generic
+Architecture: amd64
+Auto-Installed: 1
+
+Package: linux-image-4.4.0-21-generic
+Architecture: amd64
+Auto-Installed: 1
+
+Package: linux-image-extra-4.4.0-21-generic
+Architecture: amd64
+Auto-Installed: 1
+
+Package: linux-headers-4.4.0-21
+Architecture: amd64
+Auto-Installed: 1
+
+Package: linux-headers-4.4.0-21-generic
+Architecture: amd64
+Auto-Installed: 1
+
+Package: linux-firmware
+Architecture: amd64
+Auto-Installed: 1
+
+Package: linux-signed-image-4.4.0-21-generic
+Architecture: amd64
+Auto-Installed: 1
+
+Package: casper
+Architecture: amd64
+Auto-Installed: 0
+
+Package: linux-signed-image-generic
+Architecture: amd64
+Auto-Installed: 0
+
+Package: localechooser-data
+Architecture: amd64
+Auto-Installed: 1
+
+Package: user-setup
+Architecture: amd64
+Auto-Installed: 1
+
+Package: linux-headers-4.4.0-31-generic
+Architecture: amd64
+Auto-Installed: 1
+
+Package: linux-headers-4.4.0-31
+Architecture: amd64
+Auto-Installed: 1
+
+Package: linux-signed-image-4.4.0-31-generic
+Architecture: amd64
+Auto-Installed: 1
+
+Package: linux-image-4.4.0-31-generic
+Architecture: amd64
+Auto-Installed: 1
+
+Package: linux-image-extra-4.4.0-31-generic
+Architecture: amd64
+Auto-Installed: 1
+
+Package: libmpx0
+Architecture: amd64
+Auto-Installed: 1
+
+Package: libgcc-5-dev
+Architecture: amd64
+Auto-Installed: 1
+
+Package: linux-libc-dev
+Architecture: amd64
+Auto-Installed: 1
+
+Package: libfakeroot
+Architecture: amd64
+Auto-Installed: 1
+
+Package: libc6-dev
+Architecture: amd64
+Auto-Installed: 1
+
+Package: iucode-tool
+Architecture: amd64
+Auto-Installed: 1
+
+Package: libitm1
+Architecture: amd64
+Auto-Installed: 1
+
+Package: gcc
+Architecture: amd64
+Auto-Installed: 1
+
+Package: libcilkrts5
+Architecture: amd64
+Auto-Installed: 1
+
+Package: libasan2
+Architecture: amd64
+Auto-Installed: 1
+
+Package: dkms
+Architecture: amd64
+Auto-Installed: 1
+
+Package: libtsan0
+Architecture: amd64
+Auto-Installed: 1
+
+Package: libubsan0
+Architecture: amd64
+Auto-Installed: 1
+
+Package: fakeroot
+Architecture: amd64
+Auto-Installed: 1
+
+Package: gcc-5
+Architecture: amd64
+Auto-Installed: 1
+
+Package: liblsan0
+Architecture: amd64
+Auto-Installed: 1
+
+Package: manpages-dev
+Architecture: amd64
+Auto-Installed: 1
+
+Package: libc-dev-bin
+Architecture: amd64
+Auto-Installed: 1
+
+Package: libatomic1
+Architecture: amd64
+Auto-Installed: 1
+
+Package: libcc1-0
+Architecture: amd64
+Auto-Installed: 1
+
+Package: grub-efi-amd64-bin
+Architecture: amd64
+Auto-Installed: 1
+
+Package: grub-efi-amd64
+Architecture: amd64
+Auto-Installed: 1
+
+Package: shim
+Architecture: amd64
+Auto-Installed: 1
+
