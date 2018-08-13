@@ -1,0 +1,202 @@
+#add keys
+#apt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 14219A96E15E78F4 5C808C2B65558117 818A435C5FCBF54A 40976EAF437D05B5 3B4FE6ACC0B21F32  A8A515F046D7E7CF D26E6ED000654A3E 218017D1CC5FDB34 F7CA6265B6D4038E 7E3F070089DF5277 7721F63BD38B4796 8D81803C0EBFCD88 F76221572C52609D D51DB14E9FFECCF3 A2F683C52980AECF 54422A4B98AB5139 76221572C52609D 6BCA5E4DB84288D9
+#gpg: key 6BCA5E4DB84288D9: public key "VideoLAN APT Signing Key <videolan@videolan.org>" imported
+#gpg: key A20F259AEB9C94BB: public key "Freight <support@hw-ops.com>" imported
+#gpg: key 54422A4B98AB5139: public key "Oracle Corporation (VirtualBox archive signing key) <info@virtualbox.org>" imported
+#gpg: key A2F683C52980AECF: public key "Oracle Corporation (VirtualBox archive signing key) <info@virtualbox.org>" imported
+#gpg: key D51DB14E9FFECCF3: public key "Launchpad PPA for Thomas Pietrowski" imported
+#gpg: key F76221572C52609D: public key "Docker Release Tool (releasedocker) <docker@docker.com>" imported
+#gpg: key F7CA6265B6D4038E: public key "Ksplice APT Repository Signing Key <devel@ksplice.com>" imported
+#gpg: key 218017D1CC5FDB34: public key "Yandex Browser Repository Key <browser@support.yandex.ru>" imported
+#gpg: key D26E6ED000654A3E: public key "Syncthing Release Management <release@syncthing.net>" imported
+#gpg: key A8A515F046D7E7CF: public key "GetDeb Archive Automatic Signing Key <archive@getdeb.net>" imported
+#gpg: key 3B4FE6ACC0B21F32: public key "Ubuntu Archive Automatic Signing Key (2012) <ftpmaster@ubuntu.com>" imported
+#gpg: key 40976EAF437D05B5: public key "Ubuntu Archive Automatic Signing Key <ftpmaster@ubuntu.com>" imported
+#gpg: key 8D81803C0EBFCD88: "Docker Release (CE deb) <docker@docker.com>" imported
+#gpg: key 818A435C5FCBF54A: "Sebastian Lackner (WineHQ packages) <sebastian@fds-team.de>" imported
+#gpg: key 5C808C2B65558117: "Christian Marillat <marillat@debian.org>" imported
+#gpg: key 7721F63BD38B4796: "Google Inc. (Linux Packages Signing Authority) <linux-packages-keymaster@google.com>" imported
+#gpg: key 14219A96E15E78F4: "GitLab B.V. (package repository signing key) <packages@gitlab.com>" imported
+#gpg: key 7E3F070089DF5277: "Guillaume Plessis <gui@dotdeb.org>" imported
+
+deb http://mirrors.ustc.edu.cn/ubuntu/ bionic main restricted universe multiverse
+deb-src http://mirrors.ustc.edu.cn/ubuntu/ bionic main restricted universe multiverse
+
+deb http://mirrors.ustc.edu.cn/ubuntu/ bionic-updates main restricted universe multiverse
+deb-src http://mirrors.ustc.edu.cn/ubuntu/ bionic-updates main restricted universe multiverse
+
+deb http://mirrors.ustc.edu.cn/ubuntu/ bionic-proposed main restricted universe multiverse
+deb-src http://mirrors.ustc.edu.cn/ubuntu/ bionic-proposed main restricted universe multiverse
+
+deb http://mirrors.ustc.edu.cn/ubuntu/ bionic-security main restricted universe multiverse
+deb-src http://mirrors.ustc.edu.cn/ubuntu/ bionic-security main restricted universe multiverse
+
+deb http://mirrors.ustc.edu.cn/ubuntu/ bionic-backports main restricted universe multiverse
+deb-src http://mirrors.ustc.edu.cn/ubuntu/ bionic-backports main restricted universe multiverse
+
+# Google software repository http://www.google.com/linuxrepositories/apt.html
+# wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -
+# or (gpg --keyserver subkeys.pgp.net --recv A040830F7FAC5991 && gpg --export --armor A040830F7FAC5991 | apt-key add - )
+# Google software repository
+deb http://dl.google.com/linux/deb/ stable main
+
+#gpg --keyserver keyserver.ubuntu.com --recv-key 428D7C01
+
+#gpg: requesting key 428D7C01 from hkp server keyserver.ubuntu.com
+#gpg: key 428D7C01: public key "Ubuntu Debug Symbol Archive Automatic Signing Key <ubuntu-archive@lists.ubuntu.com>" imported
+#gpg: no ultimately trusted keys found
+#gpg: Total number processed: 1
+#gpg:               imported: 1
+
+#gpg --check-sigs 428D7C01
+
+#pub 1024D/428D7C01 2008-09-02
+#uid Ubuntu Debug Symbol Archive Automatic Signing Key <ubuntu-archive@lists.ubuntu.com>
+#sig!3        428D7C01 2008-09-02  Ubuntu Debug Symbol Archive Automatic Signing Key <ubuntu-archive@lists.ubuntu.com>
+#sub   2048g/A2C2A7A5 2008-09-02
+#sig!         428D7C01 2008-09-02  Ubuntu Debug Symbol Archive Automatic Signing Key <ubuntu-archive@lists.ubuntu.com>
+#
+#1 signature not checked due to a missing key
+#
+#gpg -o - --export 428D7C01 | apt-key add -
+
+#apt-key add key.gpg
+
+
+# sudo apt update
+# E: The method driver /usr/lib/apt/methods/https could not be found.
+# sudo apt install apt-transport-https
+
+# apt-key adv --keyserver keyserver.ubuntu.com --recv-keys KEYS
+
+# sudo apt-get dist-upgrade --allow-unauthenticated -y
+
+# codecs from vlc
+
+#wget -O - http://download.videolan.org/pub/debian/videolan-apt.asc | apt-key add -
+deb http://download.videolan.org/pub/debian/stable/ /
+deb-src http://download.videolan.org/pub/debian/stable/ /
+
+# codecs from vlc
+
+# gitlab
+#https://packages.gitlab.com/gitlab/gitlab-ce/packages/
+#https://packages.gitlab.com/gitlab/gitlab-ce/packages/ubuntu/trusty/gitlab-ce_8.3.2-ce.0_amd64.deb
+# this file was generated by packages.gitlab.com for
+# the repository at https://packages.gitlab.com/gitlab/gitlab-ce
+
+# curl https://packages.gitlab.com/gpg.key 2> /dev/null | apt-key add - &>/dev/null
+# curl https://packages.gitlab.com/gpg.key 2> /dev/null | apt-key add -
+
+#deb https://packages.gitlab.com/gitlab/gitlab-ce/ubuntu/ xenial main
+#deb-src https://packages.gitlab.com/gitlab/gitlab-ce/ubuntu/ xenial main
+
+deb https://mirrors.tuna.tsinghua.edu.cn/gitlab-ce/ubuntu xenial main
+deb-src https://mirrors.tuna.tsinghua.edu.cn/gitlab-ce/ubuntu xenial main
+
+deb https://mirrors.tuna.tsinghua.edu.cn/gitlab-ci-multi-runner/ubuntu xenial main
+
+
+# mt7601
+#deb http://ppa.launchpad.net/thopiekar/mt7601/ubuntu xenial main
+#deb-src http://ppa.launchpad.net/thopiekar/mt7601/ubuntu xenial main
+
+# Syncthing
+deb http://apt.syncthing.net/ syncthing release
+
+# Docker
+deb https://apt.dockerproject.org/repo ubuntu-xenial main
+
+deb https://mirrors.tuna.tsinghua.edu.cn/docker/apt/repo ubuntu-xenial main
+# deb https://mirrors.tuna.tsinghua.edu.cn/docker/apt/repo debian-jessie main
+
+# apt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 58118E89F3A912897C070ADBF76221572C52609D
+
+
+# sniproxy
+#deb http://ppa.launchpad.net/dlundquist/sniproxy/ubuntu bionic main
+
+#deb-src http://ppa.launchpad.net/dlundquist/sniproxy/ubuntu bionic main
+
+#wget -q -O- http://archive.getdeb.net/getdeb-archive.key | apt-key add -
+deb http://archive.getdeb.net/ubuntu xenial-getdeb apps
+
+#wget -q https://www.virtualbox.org/download/oracle_vbox.asc -O- | apt-key add -
+
+deb http://download.virtualbox.org/virtualbox/debian bionic non-free contrib
+
+deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic main multiverse restricted universe
+deb-src http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic main multiverse restricted universe
+
+deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-updates main multiverse restricted universe
+deb-src http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-updates main multiverse restricted universe
+
+deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-proposed main multiverse restricted universe
+deb-src http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-proposed main multiverse restricted universe
+
+deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-security main multiverse restricted universe
+deb-src http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-security main multiverse restricted universe
+
+deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-backports main multiverse restricted universe
+deb-src http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-backports main multiverse restricted universe
+
+
+#deb http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse
+
+#deb http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse
+
+#deb http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse
+
+#deb http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse
+
+#deb http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse
+
+
+# sudo apt install apt-transport-https
+
+# apt-key adv --keyserver keyserver.ubuntu.com --recv-keys
+
+# sudo apt-get dist-upgrade --allow-unauthenticated -y
+# deb http://apt.syncthing.net/ syncthing release
+
+deb https://sensu.global.ssl.fastly.net/apt xenial main
+
+deb http://mirrors.163.com/ubuntu/ bionic main restricted universe multiverse
+deb-src http://mirrors.163.com/ubuntu/ bionic main restricted universe multiverse
+
+deb http://mirrors.163.com/ubuntu/ bionic-updates main restricted universe multiverse
+deb-src http://mirrors.163.com/ubuntu/ bionic-updates main restricted universe multiverse
+
+deb http://mirrors.163.com/ubuntu/ bionic-proposed main restricted universe multiverse
+deb-src http://mirrors.163.com/ubuntu/ bionic-proposed main restricted universe multiverse
+
+deb http://mirrors.163.com/ubuntu/ bionic-security main restricted universe multiverse
+deb-src http://mirrors.163.com/ubuntu/ bionic-security main restricted universe multiverse
+
+deb http://mirrors.163.com/ubuntu/ bionic-backports main restricted universe multiverse
+deb-src http://mirrors.163.com/ubuntu/ bionic-backports main restricted universe multiverse
+
+
+deb http://archive.ubuntu.com/ubuntu/ bionic main restricted universe multiverse
+deb-src http://archive.ubuntu.com/ubuntu/ bionic main universe multiverse restricted
+
+deb http://archive.ubuntu.com/ubuntu/ bionic-proposed main restricted universe multiverse
+deb-src http://archive.ubuntu.com/ubuntu/ bionic-proposed main universe multiverse restricted
+
+deb http://archive.ubuntu.com/ubuntu/ bionic-backports main restricted universe multiverse
+deb-src http://archive.ubuntu.com/ubuntu/ bionic-backports main restricted universe multiverse
+
+deb http://security.ubuntu.com/ubuntu/ bionic-security main restricted universe multiverse
+deb-src http://security.ubuntu.com/ubuntu bionic-security main restricted universe multiverse
+
+deb http://archive.canonical.com/ bionic partner
+deb http://archive.canonical.com/ bionic-proposed partner
+
+deb http://archive.canonical.com/ubuntu/ bionic partner
+deb-src http://archive.canonical.com/ubuntu bionic partner
+
